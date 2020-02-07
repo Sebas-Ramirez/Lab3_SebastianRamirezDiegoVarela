@@ -13,8 +13,12 @@ public class Alero extends Jugador {
     }
 
     public Alero(double Altura) {
-        super(Altura);
-        this.Altura = Altura;
+        super(2.05);
+     
+    }
+
+    public Alero(int camiseta, int tiroDe3, int defensa, int tiroDeMedia, int rebote, int bandeja, int pases, int posteo) {
+        super(camiseta, tiroDe3, defensa, tiroDeMedia, rebote, bandeja, pases, posteo, 2.05);
     }
     
     public double getAltura() {

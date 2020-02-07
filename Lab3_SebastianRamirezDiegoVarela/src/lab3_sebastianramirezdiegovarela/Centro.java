@@ -14,7 +14,11 @@ public class Centro extends Jugador {
 
     public Centro(double Altura) {
         super(Altura);
-        this.Altura = Altura;
+        this.Altura = 2.13;
+    }
+
+    public Centro(int camiseta, int tiroDe3, int defensa, int tiroDeMedia, int rebote, int bandeja, int pases, int posteo) {
+        super(camiseta, tiroDe3, defensa, tiroDeMedia, rebote, bandeja, pases, posteo, 2.13);
     }
     
     public double getAltura() {

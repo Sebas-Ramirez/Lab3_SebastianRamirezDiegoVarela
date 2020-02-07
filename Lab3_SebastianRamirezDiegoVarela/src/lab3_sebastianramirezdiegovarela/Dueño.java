@@ -15,7 +15,27 @@ public Dueño() {
     }
 
     public Dueño(long netw, String nacimiento) {
+        
         this.netw = netw;
+        this.nacimiento = nacimiento;
+        
+    }
+    public void setNombre(String nombre){
+        super.setNombre(nombre);
+    }
+    public long getNetw() {
+        return netw;
+    }
+
+    public void setNetw(long netw) {
+        this.netw = netw;
+    }
+
+    public String getNacimiento() {
+        return nacimiento;
+    }
+
+    public void setNacimiento(String nacimiento) {
         this.nacimiento = nacimiento;
     }
 

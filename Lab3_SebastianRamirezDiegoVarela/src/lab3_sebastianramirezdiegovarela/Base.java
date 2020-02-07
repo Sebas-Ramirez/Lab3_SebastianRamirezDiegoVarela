@@ -19,7 +19,11 @@ public class Base extends Jugador{
 
     public Base(double Altura) {
         super(Altura);
-        this.Altura = Altura;
+        this.Altura = 1.93;
+    }
+
+    public Base(int camiseta, int tiroDe3, int defensa, int tiroDeMedia, int rebote, int bandeja, int pases, int posteo) {
+        super(camiseta, tiroDe3, defensa, tiroDeMedia, rebote, bandeja, pases, posteo,1.93);
     }
     
     public double getAltura() {

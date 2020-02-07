@@ -1,13 +1,13 @@
 package lab3_sebastianramirezdiegovarela;
 public class Jugador extends Persona {
-    private int camiseta,tiroDe3,defensa,tiroDeMedia,rebote,bandeja,posteo;
+    private int camiseta,tiroDe3,defensa,tiroDeMedia,rebote,bandeja,posteo,pases;
     private double altura;
 
     public Jugador() {
         super();
     }
 
-    public Jugador(int camiseta, int tiroDe3, int defensa, int tiroDeMedia, int rebote, int bandeja, int posteo, double altura) {
+    public Jugador(int camiseta, int tiroDe3, int defensa, int tiroDeMedia, int rebote, int bandeja, int pases, int posteo, double altura) {
         this.camiseta = camiseta;
         this.tiroDe3 = tiroDe3;
         this.defensa = defensa;

@@ -15,7 +15,11 @@ public class Alero_Pivot extends Jugador{
 
     public Alero_Pivot(double Altura) {
         super(Altura);
-        this.Altura = Altura;
+        this.Altura = 2.10;
+    }
+
+    public Alero_Pivot(int camiseta, int tiroDe3, int defensa, int tiroDeMedia, int rebote, int bandeja, int pases, int posteo) {
+        super(camiseta, tiroDe3, defensa, tiroDeMedia, rebote, bandeja, pases, posteo, 2.10);
     }
     
     public double getAltura() {
