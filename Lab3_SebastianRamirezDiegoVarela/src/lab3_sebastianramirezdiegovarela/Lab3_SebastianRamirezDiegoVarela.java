@@ -108,6 +108,8 @@ public class Lab3_SebastianRamirezDiegoVarela {
                 System.out.println("Que desea modificar?");
                 System.out.println("1) Equipo");
                 System.out.println("2) Jugador");
+                System.out.println("3) Medico");
+                System.out.println("4) Entrenador");
                 switch (input.nextInt()) {
                     case 1:
                         System.out.println("Que desea modificar?");
@@ -141,10 +143,10 @@ public class Lab3_SebastianRamirezDiegoVarela {
                         }
                     case 2:
                         for (int i = 0; i < equipos.get(e).getPersonal().size(); i++) {
-                    System.out.println("[" + equipos.get(i) + "] " + equipos.get(e).getPersonal().get(i));
-                }
+                            System.out.println("[" + equipos.get(i) + "] " + equipos.get(e).getPersonal().get(i));
+                        }
                         System.out.println("Ingrese la posicion del jugador que quiere cambiar:");
-                        int pos=input.nextInt();
+                        int pos = input.nextInt();
                         System.out.println("Que quiere cambiar del jugador?\n"
                                 + "1) Numero de camisa\n"
                                 + "2) Tiro de 3\n"
@@ -154,54 +156,93 @@ public class Lab3_SebastianRamirezDiegoVarela {
                                 + "6) Bandeja\n"
                                 + "7) Pases\n"
                                 + "8) Posteo\n");
-                        switch(input.nextInt()){
+                        switch (input.nextInt()) {
                             case 1:
                                 System.out.println("Ingrese el nuevo numero de camisa:");
-                                int nuecam=input.nextInt();
-                                ((Jugador)equipos.get(e).getPersonal().get(pos)).setCamiseta(nuecam);
+                                int nuecam = input.nextInt();
+                                ((Jugador) equipos.get(e).getPersonal().get(pos)).setCamiseta(nuecam);
                                 break;
-                                case 2:
+                            case 2:
                                 System.out.println("Ingrese el nuevo Tior de 3:");
-                                int tiro=input.nextInt();
-                                ((Jugador)equipos.get(e).getPersonal().get(pos)).setTiroDe3(tiro);
+                                int tiro = input.nextInt();
+                                ((Jugador) equipos.get(e).getPersonal().get(pos)).setTiroDe3(tiro);
                                 break;
-                                case 3:
+                            case 3:
                                 System.out.println("Ingrese la nueva defensa:");
-                                int def=input.nextInt();
-                                ((Jugador)equipos.get(e).getPersonal().get(pos)).setDefensa(def);
+                                int def = input.nextInt();
+                                ((Jugador) equipos.get(e).getPersonal().get(pos)).setDefensa(def);
                                 break;
-                                case 4:
+                            case 4:
                                 System.out.println("Ingrese el nuevo tiro de media:");
-                                int med=input.nextInt();
-                                ((Jugador)equipos.get(e).getPersonal().get(pos)).setTiroDeMedia(med);
+                                int med = input.nextInt();
+                                ((Jugador) equipos.get(e).getPersonal().get(pos)).setTiroDeMedia(med);
                                 break;
-                                case 5:
+                            case 5:
                                 System.out.println("Ingrese el nuevo rebote:");
-                                int reb=input.nextInt();
-                                ((Jugador)equipos.get(e).getPersonal().get(pos)).setRebote(reb);
+                                int reb = input.nextInt();
+                                ((Jugador) equipos.get(e).getPersonal().get(pos)).setRebote(reb);
                                 break;
-                                case 6:
+                            case 6:
                                 System.out.println("Ingrese el nuevo bandeja:");
-                                int ban=input.nextInt();
-                                ((Jugador)equipos.get(e).getPersonal().get(pos)).setBandeja(ban);
+                                int ban = input.nextInt();
+                                ((Jugador) equipos.get(e).getPersonal().get(pos)).setBandeja(ban);
                                 break;
-                                case 7:
+                            case 7:
                                 System.out.println("Ingrese el nuevo pases:");
-                                int pas=input.nextInt();
-                                ((Jugador)equipos.get(e).getPersonal().get(pos)).setPases(pas);
+                                int pas = input.nextInt();
+                                ((Jugador) equipos.get(e).getPersonal().get(pos)).setPases(pas);
                                 break;
-                                case 8:
+                            case 8:
                                 System.out.println("Ingrese el nuevo posteo:");
-                                int post=input.nextInt();
-                                ((Jugador)equipos.get(e).getPersonal().get(pos)).setPosteo(post);
+                                int post = input.nextInt();
+                                ((Jugador) equipos.get(e).getPersonal().get(pos)).setPosteo(post);
                                 break;
                         }
                         break;
-                }
-                break;
-            default:
-                throw new AssertionError();
-        }//fin switch principal
-    }
+                    case 3:
+                        for (int i = 0; i < equipos.get(e).getPersonal().size(); i++) {
+                            System.out.println("[" + equipos.get(i) + "] " + equipos.get(e).getPersonal().get(i));
+                        }
+                        System.out.println("Ingrese la posicion del jugador que quiere cambiar:");
+                        int posr = input.nextInt();
+                        System.out.println("Que quiere cambiar del jugador?\n"
+                                + "1) Nombre\n"
+                                + "2) Apellido\n"
+                                + "3) Años como profesional\n"
+                                + "4) Salario \n"
+                                + "5) Colegio\n");
+                        switch (input.nextInt()) {
+                            case 1:
+                                System.out.println("Ingrese el nuevo nombre del medico:");
+                                String nueno = input.next();
+                                ((Medico) equipos.get(e).getPersonal().get(posr)).setNombre(nombre);
+                                break;
+                            case 2:
+                                System.out.println("Ingrese el nuevo Apellido:");
+                                String ap = input.next();
+                                ((Medico) equipos.get(e).getPersonal().get(posr)).setApellido(ap);
+                                break;
+                            case 3:
+                                System.out.println("Ingrese los nuevos años como profesional:");
+                                int añ = input.nextInt();
+                                ((Medico) equipos.get(e).getPersonal().get(posr)).setAños_profesional(añ);
+                                break;
+                            case 4:
+                                System.out.println("Ingrese el nuevo salario:");
+                                int sal=input.nextInt();
+                                ((Medico) equipos.get(e).getPersonal().get(posr)).setSalario(sal);
+                                break;
+                                 case 5:
+                                System.out.println("Ingrese el nuevo salario:");
+                                int col=input.nextInt();
+                                ((Medico) equipos.get(e).getPersonal().get(posr)).setSalario(col);
+                                break;
+                        }
+                        break;
+                    default:
+                        throw new AssertionError();
+                }//fin switch principal
+        }
 
+    }
 }
