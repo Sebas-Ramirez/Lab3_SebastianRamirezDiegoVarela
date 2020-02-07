@@ -44,11 +44,11 @@ public class Lab3_SebastianRamirezDiegoVarela {
                         + "2. Agregar medico\n"
                         + "3. Agregar entrenador\n"
                         + "Ingrese opcion: ");
+                System.out.print("Ingrese la posicion del equipo: ");
+                int posicion = input.nextInt();
                 switch (input.nextInt()) {
                     case 1:
 
-                        System.out.print("Ingrese la posicion del equipo: ");
-                        int posicion = input.nextInt();
                         System.out.print("Ingrese numero de camisa: ");
                         int camisa = input.nextInt();
                         System.out.print("Ingrese tiro de 3: ");
@@ -95,7 +95,15 @@ public class Lab3_SebastianRamirezDiegoVarela {
                         System.out.print("Ingrese colegio: ");
                         String colegio = input.nextLine();
                         colegio = input.nextLine();
-
+                        equipos.get(posicion).personal.add(new Medico(colegio));
+                    case 3:
+                        System.out.println("Ingrese si jugo ");
+                        String j = input.nextLine();
+                        j = input.nextLine();
+                        System.out.println("Ingrese su jugada favorita ");
+                        String ju = input.nextLine();
+                        ju = input.nextLine();
+                        equipos.get(posicion).personal.add(new Entrenador(j, ju));
                         break;
                 }//fin switch personal
                 break;
@@ -203,9 +211,9 @@ public class Lab3_SebastianRamirezDiegoVarela {
                         for (int i = 0; i < equipos.get(e).getPersonal().size(); i++) {
                             System.out.println("[" + equipos.get(i) + "] " + equipos.get(e).getPersonal().get(i));
                         }
-                        System.out.println("Ingrese la posicion del jugador que quiere cambiar:");
+                        System.out.println("Ingrese la posicion del medico que quiere cambiar:");
                         int posr = input.nextInt();
-                        System.out.println("Que quiere cambiar del jugador?\n"
+                        System.out.println("Que quiere cambiar del medico?\n"
                                 + "1) Nombre\n"
                                 + "2) Apellido\n"
                                 + "3) Años como profesional\n"
@@ -229,27 +237,28 @@ public class Lab3_SebastianRamirezDiegoVarela {
                                 break;
                             case 4:
                                 System.out.println("Ingrese el nuevo salario:");
-                                int sal=input.nextInt();
+                                int sal = input.nextInt();
                                 ((Medico) equipos.get(e).getPersonal().get(posr)).setSalario(sal);
                                 break;
-                                 case 5:
+                            case 5:
                                 System.out.println("Ingrese el nuevo salario:");
-                                int col=input.nextInt();
+                                int col = input.nextInt();
                                 ((Medico) equipos.get(e).getPersonal().get(posr)).setSalario(col);
                                 break;
                         }
-                         case 4:
+                    case 4:
                         for (int i = 0; i < equipos.get(e).getPersonal().size(); i++) {
                             System.out.println("[" + equipos.get(i) + "] " + equipos.get(e).getPersonal().get(i));
                         }
-                        System.out.println("Ingrese la posicion del jugador que quiere cambiar:");
+                        System.out.println("Ingrese la posicion del entrenador que quiere cambiar:");
                         int posri = input.nextInt();
-                        System.out.println("Que quiere cambiar del jugador?\n"
+                        System.out.println("Que quiere cambiar del entrenador?\n"
                                 + "1) Nombre\n"
                                 + "2) Apellido\n"
                                 + "3) Años como profesional\n"
                                 + "4) Salario \n"
-                                + "5) Colegio\n");
+                                + "5) Si jugo o no\n"
+                                + "6) Jugada favorita\n");
                         switch (input.nextInt()) {
                             case 1:
                                 System.out.println("Ingrese el nuevo nombre del medico:");
@@ -268,24 +277,26 @@ public class Lab3_SebastianRamirezDiegoVarela {
                                 break;
                             case 4:
                                 System.out.println("Ingrese el nuevo salario:");
-                                int sal=input.nextInt();
+                                int sal = input.nextInt();
                                 ((Entrenador) equipos.get(e).getPersonal().get(posri)).setSalario(sal);
                                 break;
-                                 case 5:
+                            case 5:
                                 System.out.println("Ingrese si fue jugador o no:");
-                                String ju=input.next();
+                                String ju = input.next();
                                 ((Entrenador) equipos.get(e).getPersonal().get(posri)).setJugó(ju);
                                 break;
-                                 case 6:
-                                     System.out.println("Ingrese jugada favorita:");
-                                     String jugada=input.nextLine();
-                                     jugada=input.nextLine();
-                                     break;
+                            case 6:
+                                System.out.println("Ingrese jugada favorita:");
+                                String jugada = input.nextLine();
+                                jugada = input.nextLine();
+                                break;
                         }
-                        break;
                     default:
                         throw new AssertionError();
-                }//fin switch principal
+                }
+            case 4:
+                
+                break;
         }
 
     }
