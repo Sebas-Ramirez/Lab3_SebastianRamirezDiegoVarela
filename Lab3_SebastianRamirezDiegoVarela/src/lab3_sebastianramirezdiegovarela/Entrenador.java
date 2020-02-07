@@ -10,24 +10,24 @@ package lab3_sebastianramirezdiegovarela;
  * @author diego
  */
 public class Entrenador extends Persona {
-    public boolean jugó;
+    public String jugó;
     public String jugadafav;
 
     public Entrenador() {
     super();
     }
 
-    public Entrenador(boolean jugó, String jugadafav) {
+    public Entrenador(String jugó, String jugadafav) {
         
         this.jugó = jugó;
         this.jugadafav = jugadafav;
     }
 
-    public boolean isJugó() {
+    public String isJugó() {
         return jugó;
     }
 
-    public void setJugó(boolean jugó) {
+    public void setJugó(String jugó) {
         this.jugó = jugó;
     }
 
