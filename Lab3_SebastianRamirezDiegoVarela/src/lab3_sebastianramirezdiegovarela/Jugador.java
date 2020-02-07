@@ -1,6 +1,8 @@
 package lab3_sebastianramirezdiegovarela;
+
 public class Jugador extends Persona {
-    private int camiseta,tiroDe3,defensa,tiroDeMedia,rebote,bandeja,posteo,pases;
+
+    private int camiseta, tiroDe3, defensa, tiroDeMedia, rebote, bandeja, posteo, pases;
     private double altura;
 
     public Jugador() {
@@ -8,16 +10,34 @@ public class Jugador extends Persona {
     }
 
     public Jugador(int camiseta, int tiroDe3, int defensa, int tiroDeMedia, int rebote, int bandeja, int pases, int posteo, double altura) {
-        this.camiseta = camiseta;
-        this.tiroDe3 = tiroDe3;
-        this.defensa = defensa;
-        this.tiroDeMedia = tiroDeMedia;
-        this.rebote = rebote;
-        this.bandeja = bandeja;
-        this.posteo = posteo;
-        this.altura = altura;
-        this.pases=pases;
-        
+        if (camiseta <= 100) {
+            this.camiseta = camiseta;
+        }
+        if (tiroDe3 <= 100) {
+            this.tiroDe3 = tiroDe3;
+        }
+        if (defensa <= 100) {
+            this.defensa = defensa;
+        }
+        if (tiroDeMedia <= 100) {
+            this.tiroDeMedia = tiroDeMedia;
+        }
+        if (rebote <= 100) {
+            this.rebote = rebote;
+        }
+        if (bandeja <= 100) {
+            this.bandeja = bandeja;
+        }
+        if (posteo <= 100) {
+            this.posteo = posteo;
+        }
+        if (altura <= 100) {
+            this.altura = altura;
+        }
+        if (pases <= 100) {
+            this.pases = pases;
+        }
+
     }
 
     public int getPases() {
@@ -100,5 +120,5 @@ public class Jugador extends Persona {
     public String toString() {
         return "Jugador{" + "camiseta=" + camiseta + ", tiroDe3=" + tiroDe3 + ", defensa=" + defensa + ", tiroDeMedia=" + tiroDeMedia + ", rebote=" + rebote + ", bandeja=" + bandeja + ", posteo=" + posteo + ", altura=" + altura + '}';
     }
-    
+
 }
