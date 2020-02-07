@@ -17,7 +17,8 @@ public class Lab3_SebastianRamirezDiegoVarela {
                 + "5. Despedir personal\n"
                 + "6. Jugara\n"
                 + "7. Entrenara\n"
-                + "8. Salir/n"
+                + "8. Contratar\n"
+                + "9. Salir/n"
                 + "Ingrese opcion: ");
         switch (input.nextInt()) {
             case 1:
@@ -325,8 +326,26 @@ public class Lab3_SebastianRamirezDiegoVarela {
                 agentes_libres.add(equipos.get(e).getPersonal().get(posicion));
                 equipos.get(e).getPersonal().remove(posicion);
                 break;
+            case 6:
+                
+                break;
+            case 7:
+                break;
             case 8:
-                System.exit(0);
+                for (int i = 0; i < agentes_libres.size(); i++) {
+                    System.out.println("["+i+"] "+ agentes_libres.get(i));
+                }
+                System.out.print("Seleccione a quien desea contratar: ");
+                int contrato = input.nextInt();
+                for (int i = 0; i < equipos.size(); i++) {
+                    System.out.println("[" + equipos.get(i) + "] " + equipos.get(i).getNombre());
+                }
+                System.out.print("Ingrese la posicion del equipo: ");
+                e = input.nextInt();
+                equipos.add(((Equipo)agentes_libres.get(contrato)));
+                break;
+            case 9:
+                 System.exit(0);
                 break;
         }
 
