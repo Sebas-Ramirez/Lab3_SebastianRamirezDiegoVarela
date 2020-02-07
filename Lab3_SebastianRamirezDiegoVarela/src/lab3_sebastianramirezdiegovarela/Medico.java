@@ -1,5 +1,5 @@
 package lab3_sebastianramirezdiegovarela;
-public class Medico {
+public class Medico extends Persona{
     private String colegio;
 
     public Medico() {
