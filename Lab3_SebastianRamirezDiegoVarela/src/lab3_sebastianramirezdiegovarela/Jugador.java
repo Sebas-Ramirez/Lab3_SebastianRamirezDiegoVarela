@@ -16,7 +16,16 @@ public class Jugador extends Persona {
         this.bandeja = bandeja;
         this.posteo = posteo;
         this.altura = altura;
+        this.pases=pases;
         
+    }
+
+    public int getPases() {
+        return pases;
+    }
+
+    public void setPases(int pases) {
+        this.pases = pases;
     }
 
     public Jugador(double altura) {
