@@ -19,6 +19,10 @@ public class Jugador extends Persona {
         
     }
 
+    public Jugador(double altura) {
+        this.altura = altura;
+    }
+
     public int getCamiseta() {
         return camiseta;
     }

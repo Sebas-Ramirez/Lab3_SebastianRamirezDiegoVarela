@@ -7,8 +7,28 @@ package lab3_sebastianramirezdiegovarela;
 
 public class Alero_Pivot extends Jugador{
 
-    public Alero_Pivot(int camiseta, int tiroDe3, int defensa, int tiroDeMedia, int rebote, int bandeja, int posteo, double altura) {
-        super(camiseta, tiroDe3, defensa, tiroDeMedia, rebote, bandeja, posteo, 2.10);
+      private double Altura;
+
+    public Alero_Pivot() {
+    super();
+    }
+
+    public Alero_Pivot(double Altura) {
+        super(Altura);
+        this.Altura = Altura;
+    }
+    
+    public double getAltura() {
+        return Altura;
+    }
+
+    public void setAltura(double Altura) {
+        this.Altura = Altura;
+    }
+
+    @Override
+    public String toString() {
+        return "Alero_Pivot{" + "Altura=" + Altura + '}';
     }
     
 }

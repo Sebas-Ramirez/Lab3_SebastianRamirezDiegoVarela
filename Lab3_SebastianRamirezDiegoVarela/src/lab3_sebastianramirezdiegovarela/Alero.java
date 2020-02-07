@@ -6,8 +6,29 @@
 package lab3_sebastianramirezdiegovarela;
 public class Alero extends Jugador {
 
-    public Alero(int camiseta, int tiroDe3, int defensa, int tiroDeMedia, int rebote, int bandeja, int posteo, double altura) {
-        super(camiseta, tiroDe3, defensa, tiroDeMedia, rebote, bandeja, posteo, 2.05);
+     private double Altura;
+
+    public Alero() {
+    super();
     }
+
+    public Alero(double Altura) {
+        super(Altura);
+        this.Altura = Altura;
+    }
+    
+    public double getAltura() {
+        return Altura;
+    }
+
+    public void setAltura(double Altura) {
+        this.Altura = Altura;
+    }
+
+    @Override
+    public String toString() {
+        return "Alero{" + "Altura=" + Altura + '}';
+    }
+
     
 }

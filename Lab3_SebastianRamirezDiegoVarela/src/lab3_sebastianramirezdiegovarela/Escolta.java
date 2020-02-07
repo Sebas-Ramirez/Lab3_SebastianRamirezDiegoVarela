@@ -6,9 +6,30 @@
 package lab3_sebastianramirezdiegovarela;
 public class Escolta extends Jugador {
 
-    public Escolta(int camiseta, int tiroDe3, int defensa, int tiroDeMedia, int rebote, int bandeja, int posteo, double altura) {
-        super(camiseta, tiroDe3, defensa, tiroDeMedia, rebote, bandeja, posteo, 2);
+    private double Altura;
+
+    public Escolta() {
+    super();
     }
+
+    public Escolta(double Altura) {
+        super(Altura);
+        this.Altura = Altura;
+    }
+    
+    public double getAltura() {
+        return Altura;
+    }
+
+    public void setAltura(double Altura) {
+        this.Altura = Altura;
+    }
+
+    @Override
+    public String toString() {
+        return "Escolta{" + "Altura=" + Altura + '}';
+    }
+
     
     
 }
