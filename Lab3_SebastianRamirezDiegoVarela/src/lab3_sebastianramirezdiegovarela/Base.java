@@ -9,6 +9,10 @@ package lab3_sebastianramirezdiegovarela;
  *
  * @author diego
  */
-public class Base {
+public class Base extends Jugador{
+
+    public Base(int camiseta, int tiroDe3, int defensa, int tiroDeMedia, int rebote, int bandeja, int posteo, double altura) {
+        super(camiseta, tiroDe3, defensa, tiroDeMedia, rebote, bandeja, posteo, 1.93);
+    }
     
 }
