@@ -9,7 +9,7 @@ public class MedicoGeneral extends Medico {
     public MedicoGeneral(int numero_enfermedades) {
         this.numero_enfermedades = numero_enfermedades;    
     }
-
+    
     public int getNumero_enfermedades() {
         return numero_enfermedades;
     }
