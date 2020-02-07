@@ -9,12 +9,15 @@ public class Lab3_SebastianRamirezDiegoVarela {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         ArrayList<Equipo> equipos = new ArrayList();
+        ArrayList agentes_libres = new ArrayList();
         System.out.print("1. Crear Equipo\n"
                 + "2. Agregar personal\n"
                 + "3. Modificar Equipo\n"
                 + "4. Eliminar Equipo\n"
-                + "5. Jugara\n"
-                + "6. Entrenara\n"
+                + "5. Despedir personal\n"
+                + "6. Jugara\n"
+                + "7. Entrenara\n"
+                + "8. Salir/n"
                 + "Ingrese opcion: ");
         switch (input.nextInt()) {
             case 1:
@@ -294,8 +297,36 @@ public class Lab3_SebastianRamirezDiegoVarela {
                     default:
                         throw new AssertionError();
                 }
-            case 4:
-                
+            case 4://eliminar equipo
+                for (int i = 0; i < equipos.size(); i++) {
+                    System.out.println("[" + equipos.get(i) + "] " + equipos.get(i).getNombre());
+                }
+                System.out.print("Ingrese la posicion del equipo: ");
+                e = input.nextInt();
+                for (int i = 0; i < equipos.get(e).getPersonal().size(); i++) {
+                    System.out.println("[" + equipos.get(i) + "] " + equipos.get(i).getNombre());
+                }
+                System.out.println("Ingrese posicion: ");
+                posicion = input.nextInt();
+                equipos.remove(posicion);
+                break;
+            case 5:
+                for (int i = 0; i < equipos.size(); i++) {
+                    System.out.println("[" + equipos.get(i) + "] " + equipos.get(i).getNombre());
+                }
+                System.out.print("Ingrese la posicion del equipo: ");
+                e = input.nextInt();
+                for (int i = 0; i < equipos.get(e).getPersonal().size(); i++) {
+                    System.out.println("[" + equipos.get(e).getPersonal().get(i) + "] " + equipos.get(e).getPersonal().get(i).getNombre());
+                }
+                System.out.println("Ingrese posicion: ");
+                posicion = input.nextInt();
+                System.out.println("Se despide: "+equipos.get(e).getPersonal().get(posicion).getNombre());
+                agentes_libres.add(equipos.get(e).getPersonal().get(posicion));
+                equipos.get(e).getPersonal().remove(posicion);
+                break;
+            case 8:
+                System.exit(0);
                 break;
         }
 
