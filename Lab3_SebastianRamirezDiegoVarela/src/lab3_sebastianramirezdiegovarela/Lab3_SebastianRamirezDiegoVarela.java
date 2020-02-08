@@ -2,6 +2,7 @@ package lab3_sebastianramirezdiegovarela;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Lab3_SebastianRamirezDiegoVarela {
@@ -10,6 +11,7 @@ public class Lab3_SebastianRamirezDiegoVarela {
         Scanner input = new Scanner(System.in);
         ArrayList<Equipo> equipos = new ArrayList();
         ArrayList agentes_libres = new ArrayList();
+        Random random = new Random();
         System.out.print("1. Crear Equipo\n"
                 + "2. Agregar personal\n"
                 + "3. Modificar Equipo\n"
@@ -47,6 +49,7 @@ public class Lab3_SebastianRamirezDiegoVarela {
                 System.out.println("1. Agregar Jugador\n"
                         + "2. Agregar medico\n"
                         + "3. Agregar entrenador\n"
+                        + "4. Agregar Jugada\n"
                         + "Ingrese opcion: ");
                 System.out.print("Ingrese la posicion del equipo: ");
                 int posicion = input.nextInt();
@@ -109,6 +112,15 @@ public class Lab3_SebastianRamirezDiegoVarela {
                         ju = input.nextLine();
                         equipos.get(posicion).personal.add(new Entrenador(j, ju));
                         break;
+                    case 4:
+                        System.out.print("Ingrese descripcion: ");
+                        String descripcion = input.nextLine();
+                        descripcion = input.nextLine();
+                        System.out.print("Ingrese efectividad: ");
+                        int efectividad = input.nextInt();
+                        equipos.get(posicion).listajug.add(new Jugadas(descripcion,efectividad));
+                        break;
+                    
                 }//fin switch personal
                 break;
             case 3:
@@ -327,9 +339,35 @@ public class Lab3_SebastianRamirezDiegoVarela {
                 equipos.get(e).getPersonal().remove(posicion);
                 break;
             case 6:
-                
+                int lesion = random.nextInt(101);
+                int enfermedades = random.nextInt(101);
+                if(lesion<40){
+                    System.out.println("Se ha enfermado\n"
+                            + "Se le asigna un cirujano");
+                    System.out.println("Se le ha asignado un terapeuta");
+                }
+                if(enfermedades<30){
+                    System.out.println("Se ha enfermado el jugador\n"
+                            + "Se le ha asignado un medico");
+                }
                 break;
             case 7:
+                for (int i = 0; i < equipos.size(); i++) {
+                    System.out.println("[" + equipos.get(i) + "] " + equipos.get(i).getNombre());
+                }
+                System.out.print("Ingrese la posicion del equipo: ");
+                posicion = input.nextInt();
+                int p;
+                for (int k = 0; k < 3; k++) {
+                    for (int i = 0; i < equipos.get(posicion).getListajug().size(); i++) {
+                    System.out.println("[" + i + "] " + equipos.get(posicion).getListajug().get(i).getDescripcion());
+                    }
+                    System.out.println("Ingrese la posicion de la jugada: ");
+                    p = input.nextInt();
+                    if(random.nextBoolean()){
+                        System.out.println("Jugada realizada con exito");
+                    }
+                }
                 break;
             case 8:
                 for (int i = 0; i < agentes_libres.size(); i++) {
